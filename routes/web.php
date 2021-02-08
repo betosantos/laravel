@@ -1,11 +1,14 @@
 <?php
 
-Route::get('/imagens', function () {
-  Artisan::call('storage:link');
-});
 
 Route::get('/', 'FrontController@front')->name('front');
 Route::get('/sobre', 'FrontController@sobre')->name('front.sobre');
+Route::get('/curso', 'FrontController@curso')->name('front.curso');
+Route::get('/contato', 'FrontController@contato')->name('front.contato');
+Route::get('/detalhes/{id}', 'FrontController@detalhes')->name('front.detalhes');
+
+
+
 
 Route::prefix('admin')->group(function () {
     Route::get('/categorias', 'CategoriasController@index')->name('admin.categorias.index');

@@ -41,22 +41,22 @@
       <nav class="nav-menu d-none d-lg-block">
         <ul>
           <li><a href="{{ route('front') }}">Home</a></li>
-          <li><a href="courses.html">Cursos</a></li>
-          <li class="drop-down"><a href="">Drop Down</a>
+          {{-- <li><a href="{{ route('front.curso') }}">Cursos</a></li> --}}
+          <li class="drop-down"><a href="{{ route('front.curso') }}">Cursos</a>
             <ul>
               <li><a href="#">Drop Down 1</a></li>
-              <li class="drop-down"><a href="#">Deep Drop Down</a>
+              {{-- <li class="drop-down"><a href="#">Deep Drop Down</a>
                 <ul>
                   <li><a href="#">Deep Drop Down 1</a></li>
                   <li><a href="#">Deep Drop Down 2</a></li>
                 </ul>
-              </li>
+              </li> --}}
               <li><a href="#">Drop Down 2</a></li>
               <li><a href="#">Drop Down 3</a></li>
             </ul>
           </li>
           <li><a href="{{ route('front.sobre') }}">Sobre</a></li>
-          <li><a href="contact.html">Contato</a></li>
+          <li><a href="{{ route('front.contato') }}">Contato</a></li>
 
         </ul>
       </nav><!-- .nav-menu -->
@@ -84,19 +84,18 @@
               A108 Adam Street <br>
               New York, NY 535022<br>
               United States <br><br>
-              <strong>Phone:</strong> +1 5589 55488 55<br>
-              <strong>Email:</strong> info@example.com<br>
+              <strong>Celular:</strong> (11) 9 9610-8766<br>
+              <strong>Email:</strong> oliveira.roberto@gmail.com<br>
             </p>
           </div>
 
           <div class="col-lg-2 col-md-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{{ route('front') }}">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{{ route('front.sobre') }}">Sobre</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{{ route('front.curso') }}">Cursos</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{{ route('front.contato') }}">Contato</a></li>
             </ul>
           </div>
 
