@@ -35,11 +35,7 @@
         <tbody>
           <tr>
             <td>
-              <img class="img-responsive" src="{{ url("storage/cursos/{$curso->imagem}") }}" style="max-width: 110px;">
-              <img src="{{ asset("storage/cursos/{$curso->imagem}") }}">
-              <img src="{{ Storage::url('cursos/'.$curso->imagem) }}">
-              <img src="{{ storage_path('app/public/cursos/'.$curso->imagem) }}">
-              <?php echo public_path(''); ?>
+              <img class="img-responsive" src="{{ url("storage/cursos/{$curso->imagem}") }}" style="max-width: 130px;">              
             </td>
             <td><a href="{{ route('admin.cursos.edit', $curso->id) }}">{{ $curso->nome }}</a></td>
             <td>
