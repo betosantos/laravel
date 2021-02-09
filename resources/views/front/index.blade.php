@@ -33,7 +33,7 @@
           </p>
           <br/>
           <ul>
-            <li><i class="icofont-check-circled"></i> O desenvolvimento e o domínio destas habilidades serão fundamentais para as organizações buscarem uma posição melhor no mercado em relação aos seus concorrentes, sendo necessário um engajamento na constante busca por inovação..</li>
+            <li><i class="icofont-check-circled"></i> O desenvolvimento e o domínio das habilidades relacionadas a tecnologia da informação serão fundamentais para as organizações buscarem uma posição melhor no mercado em relação aos seus concorrentes, sendo necessário um engajamento na constante busca por inovação..</li>
             <br/>
             <li><i class="icofont-check-circled"></i> Em contrapartida, as organizações que resistirem à economia da informação serão facilmente vencidas pela concorrência..</li>
           </ul>
@@ -195,29 +195,39 @@
       <p>Cursos em Destaque</p>
     </div>
 
-    <div class="row" data-aos="zoom-in" data-aos-delay="100">
+    <div class="row row-cols-1 row-cols-md-3" data-aos="zoom-in" data-aos-delay="100">
       @foreach($cursos as $curso)
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-          <div class="course-item">
-            <img src="{{ url("storage/cursos/{$curso->imagem}") }}" class="img-fluid" alt="">
+        <div class="col mb-4 align-items-stretch">
+          <div class="course-content card">
+            <a href="{{ route('front.detalhes',$curso->id) }}">
+              <img src="{{ url("storage/cursos/{$curso->imagem}") }}" class="img-fluid" alt="">
+            </a>
 
-            <div class="course-content">
-              <h3><a href="course-details.html">Website Design</a></h3>
-              <p>Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae dolores dolorem tempore.</p>
-
-              <ul>
+            <div class="card-body">
+              <a href="{{ route('front.detalhes',$curso->id) }}">
+                <h3 style="color:black !important;">{{ $curso->nome }}</h3>
+                <p class="card-text">{{ $curso->descricao }}</p>
                 @foreach($curso->categorias as $cat)
-                  <li>{{ $cat->nome }}</li>
+                  <span class="badge badge-success align-left">{{ $cat->nome }}</span>
                 @endforeach
-              </ul>
-            </div>
-            <div class="card-body text-right price">
-              <b> R$ {{ $curso->preco }} </b>
+
+                <div class="row price card-footer" style="margin-top:20px;">
+                  <div class="col-md-6 text-left">
+                    Preço
+                  </div>
+                  <div class="col-md-6 pull-right">
+                    R$ {{ $curso->preco }}
+                  </div>
+                </div>
+
+                <button type="button" class="btn btn-success btn-block" style="margin-top:10px;">Detalhes</button>
+              </a>
+
             </div>
           </div>
-        </div> <!-- End Course Item-->
+        </div>
       @endforeach
-    </div><!-- Fim da Primeira Linha Row -->
+    </div>
 
 
   </div>

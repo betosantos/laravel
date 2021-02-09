@@ -33,9 +33,11 @@
 
             <div class="course-info d-flex justify-content-between align-items-center">
               <h5>Preço</h5>
-              <p>{{ $curso->preco }}</p>
+              <p>R$ {{ $curso->preco }}</p>
             </div>
 
+            <br />
+            <button type="button" class="btn btn-success btn-lg btn-block">Comprar</button>
             {{-- <div class="course-info d-flex justify-content-between align-items-center">
               <h5>Available Seats</h5>
               <p>30</p>

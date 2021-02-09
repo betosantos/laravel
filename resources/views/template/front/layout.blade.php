@@ -34,7 +34,7 @@
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo mr-auto"><a href="index.html">Mentor</a></h1>
+      <h1 class="logo mr-auto"><a href="{{ route('front') }}">Mentor</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
@@ -44,24 +44,18 @@
           {{-- <li><a href="{{ route('front.curso') }}">Cursos</a></li> --}}
           <li class="drop-down"><a href="{{ route('front.curso') }}">Cursos</a>
             <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              {{-- <li class="drop-down"><a href="#">Deep Drop Down</a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                </ul>
-              </li> --}}
-              <li><a href="#">Drop Down 2</a></li>
-              <li><a href="#">Drop Down 3</a></li>
+              @foreach($categorias as $categoria)
+                <li><a href="#">{{ $categoria->nome }}</a></li>
+              @endforeach
             </ul>
           </li>
           <li><a href="{{ route('front.sobre') }}">Sobre</a></li>
           <li><a href="{{ route('front.contato') }}">Contato</a></li>
-
         </ul>
       </nav><!-- .nav-menu -->
 
-      <a href="courses.html" class="get-started-btn">Conheça</a>
+
+      <a href="courses.html" class="get-started-btn">Login</a>
 
     </div>
   </header><!-- End Header -->
