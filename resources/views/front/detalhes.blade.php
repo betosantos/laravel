@@ -27,7 +27,7 @@
           <div class="col-lg-4">
 
             <div class="course-info d-flex justify-content-between align-items-center">
-              <h5>Endereço Download</h5>
+              <h5>Download</h5>
               <p><a href="#">{{ $curso->url }}</a></p>
             </div>
 
@@ -39,39 +39,39 @@
             <br />
             <button type="button" class="btn btn-success btn-lg btn-block">Comprar</button>
             {{-- <div class="course-info d-flex justify-content-between align-items-center">
-              <h5>Available Seats</h5>
-              <p>30</p>
-            </div>
-
-            <div class="course-info d-flex justify-content-between align-items-center">
-              <h5>Schedule</h5>
-              <p>5.00 pm - 7.00 pm</p>
-            </div> --}}
-
+            <h5>Available Seats</h5>
+            <p>30</p>
           </div>
-        </div>
+
+          <div class="course-info d-flex justify-content-between align-items-center">
+          <h5>Schedule</h5>
+          <p>5.00 pm - 7.00 pm</p>
+        </div> --}}
 
       </div>
-    </section><!-- End Cource Details Section -->
+    </div>
 
-    <!-- ======= Cource Details Tabs Section ======= -->
-    <section id="cource-details-tabs" class="cource-details-tabs">
-      <div class="container" data-aos="fade-up">
+  </div>
+</section><!-- End Cource Details Section -->
 
-        {{-- <div class="row">
-        <div class="col-lg-3">
-        <ul class="nav nav-tabs flex-column">
-        <li class="nav-item">
-        <a class="nav-link active show" data-toggle="tab" href="#tab-1">Modi sit est</a>
-      </li>
-      <li class="nav-item">
-      <a class="nav-link" data-toggle="tab" href="#tab-2">Unde praesentium sed</a>
-    </li>
+<!-- ======= Cource Details Tabs Section ======= -->
+<section id="cource-details-tabs" class="cource-details-tabs">
+  <div class="container" data-aos="fade-up">
+
+    {{-- <div class="row">
+    <div class="col-lg-3">
+    <ul class="nav nav-tabs flex-column">
     <li class="nav-item">
-    <a class="nav-link" data-toggle="tab" href="#tab-3">Pariatur explicabo vel</a>
+    <a class="nav-link active show" data-toggle="tab" href="#tab-1">Modi sit est</a>
   </li>
   <li class="nav-item">
-  <a class="nav-link" data-toggle="tab" href="#tab-4">Nostrum qui quasi</a>
+  <a class="nav-link" data-toggle="tab" href="#tab-2">Unde praesentium sed</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" data-toggle="tab" href="#tab-3">Pariatur explicabo vel</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" data-toggle="tab" href="#tab-4">Nostrum qui quasi</a>
 </li>
 <li class="nav-item">
 <a class="nav-link" data-toggle="tab" href="#tab-5">Iusto ut expedita aut</a>

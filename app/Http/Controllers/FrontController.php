@@ -33,6 +33,15 @@ class FrontController extends Controller
   }
 
 
+  public function categoria($id)
+  {
+    $categoria = Categoria::find($id);
+    $cursos = Curso::all();
+    $curso = Curso::all();
+    return view('front.categoriabyid', compact('cursos','categoria','curso'));
+  }
+
+
   public function detalhes($id)
   {
     $curso = Curso::find($id);

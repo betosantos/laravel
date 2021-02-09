@@ -45,7 +45,7 @@
           <li class="drop-down"><a href="{{ route('front.curso') }}">Cursos</a>
             <ul>
               @foreach($categorias as $categoria)
-                <li><a href="#">{{ $categoria->nome }}</a></li>
+                <li><a href="{{ route('front.categoria',$categoria->id) }}">{{ $categoria->nome }}</a></li>
               @endforeach
             </ul>
           </li>

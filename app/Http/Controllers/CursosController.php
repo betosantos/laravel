@@ -72,17 +72,16 @@ class CursosController extends Controller
   {
     $data = $request->all();
 
-    if($request->hasFile('imagem')) {
+    if($files = $request->hasFile('imagem')) {
+      $name = uniqid(date('HisYmd'));
+      $extension =  $request->imagem->extension();
+      $nameFile = "{$name}.{$extension}";
 
-      if ($request->imagem && Storage::exists($request->imagem)) {
-        Storage::delete($curso->imagem);
-      }
+      $data['imagem'] = $nameFile;
 
-      $imagemPath = $request->imagem->store('cursos');
-
-      $data['imagem'] = $imagemPath;
+      $upload = $request->file('imagem')->storeAs('cursos', $nameFile);
     }
-
+    
     $curso = Curso::find($id);
     $curso->update($data);
     $curso->categorias()->sync($data['categorias']);

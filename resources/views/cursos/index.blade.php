@@ -35,7 +35,11 @@
         <tbody>
           <tr>
             <td>
-              <img class="img-responsive" src="{{ url("storage/cursos/{$curso->imagem}") }}" style="max-width: 130px;">              
+              @if($curso->imagem)
+                <img class="img-responsive" src="{{ url("storage/cursos/{$curso->imagem}") }}" style="max-width: 130px;">
+              @else
+                <img class="img-responsive" src="{{ url("storage/cursos/nofoto.jpg") }}" style="max-width: 130px;">
+              @endif
             </td>
             <td><a href="{{ route('admin.cursos.edit', $curso->id) }}">{{ $curso->nome }}</a></td>
             <td>

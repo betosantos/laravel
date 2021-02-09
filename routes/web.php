@@ -6,6 +6,7 @@ Route::get('/sobre', 'FrontController@sobre')->name('front.sobre');
 Route::get('/curso', 'FrontController@curso')->name('front.curso');
 Route::get('/contato', 'FrontController@contato')->name('front.contato');
 Route::get('/detalhes/{id}', 'FrontController@detalhes')->name('front.detalhes');
+Route::get('/categoria/{id}', 'FrontController@categoria')->name('front.categoria');
 
 
 

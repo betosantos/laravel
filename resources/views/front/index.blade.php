@@ -200,13 +200,18 @@
         <div class="col mb-4 align-items-stretch">
           <div class="course-content card">
             <a href="{{ route('front.detalhes',$curso->id) }}">
-              <img src="{{ url("storage/cursos/{$curso->imagem}") }}" class="img-fluid" alt="">
+              @if ($curso->imagem)
+                <img src="{{ url("storage/cursos/{$curso->imagem}") }}" class="img-fluid" alt="">
+              @else
+                <img src="{{ url("storage/cursos/nofoto.jpg") }}" class="img-fluid" alt="">
+              @endif
             </a>
 
             <div class="card-body">
               <a href="{{ route('front.detalhes',$curso->id) }}">
                 <h3 style="color:black !important;">{{ $curso->nome }}</h3>
                 <p class="card-text">{{ $curso->descricao }}</p>
+
                 @foreach($curso->categorias as $cat)
                   <span class="badge badge-success align-left">{{ $cat->nome }}</span>
                 @endforeach
@@ -220,7 +225,7 @@
                   </div>
                 </div>
 
-                <button type="button" class="btn btn-success btn-block" style="margin-top:10px;">Detalhes</button>
+                <a href="{{ route('front.detalhes',$curso->id) }}"><button type="button" class="btn btn-success btn-block" style="margin-top:10px;">Detalhes</button></a>
               </a>
 
             </div>
