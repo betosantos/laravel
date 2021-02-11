@@ -51,11 +51,12 @@
           </li>
           <li><a href="{{ route('front.sobre') }}">Sobre</a></li>
           <li><a href="{{ route('front.contato') }}">Contato</a></li>
+          <li><a href="{{ route('register') }}">Registro</a></li>
         </ul>
       </nav><!-- .nav-menu -->
 
 
-      <a href="courses.html" class="get-started-btn">Login</a>
+      <a href="{{ route('login') }}" class="get-started-btn">Login</a>
 
     </div>
   </header><!-- End Header -->

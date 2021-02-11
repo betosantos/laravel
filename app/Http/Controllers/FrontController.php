@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Categoria;
 use App\Curso;
+use Auth;
 
 class FrontController extends Controller
 {
@@ -33,6 +34,13 @@ class FrontController extends Controller
   }
 
 
+  public function logout()
+  {
+    Auth::logout();
+    return redirect()->route('front');
+  }
+
+
   public function categoria($id)
   {
     $categoria = Categoria::find($id);
@@ -47,7 +55,5 @@ class FrontController extends Controller
     $curso = Curso::find($id);
     return view('front.detalhes', compact('curso'));
   }
-
-
 
 }
