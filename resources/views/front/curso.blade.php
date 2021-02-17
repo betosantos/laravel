@@ -2,101 +2,65 @@
 
 @section('content')
 
-
   <main id="main" data-aos="fade-in">
 
     <!-- ======= Breadcrumbs ======= -->
     <div class="breadcrumbs">
       <div class="container">
         <h2>Cursos</h2>
-        <p>Est dolorum ut non facere possimus quibusdam eligendi voluptatem. Quia id aut similique quia voluptas sit quaerat debitis. Rerum omnis ipsam aperiam consequatur laboriosam nemo harum praesentium. </p>
+        {{-- <p>Est dolorum ut non facere possimus quibusdam eligendi voluptatem. Quia id aut similique quia voluptas sit quaerat debitis. Rerum omnis ipsam aperiam consequatur laboriosam nemo harum praesentium. </p> --}}
       </div>
     </div><!-- End Breadcrumbs -->
 
     <!-- ======= Courses Section ======= -->
     <section id="courses" class="courses">
       <div class="container" data-aos="fade-up">
+        <form class="form-inline" style="margin-bottom:20px;" method="GET" action="{{ route('front.search') }}">
+          <div class="input-group" style="width:100%;">
+            <input type="search" class="form-control rounded" placeholder="Buscar Cursos" name="search" id="search"/>
+            {{-- <button type="button" class="btn btn-outline-success">Buscar</button> --}}
+            <button type="submit" class="btn btn-success">Buscar</button>
+          </div>
+        </form>
 
         <div class="row" data-aos="zoom-in" data-aos-delay="100">
+          @foreach ($cursos as $curso)
+            <div class="col-lg-4 d-flex align-items-stretch" style="margin-bottom:40px;">
 
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-            <div class="course-item">
-              <img src="{{ asset('front/assets/img/course-1.jpg') }}" class="img-fluid" alt="...">
-              <div class="course-content">
-                <div class="d-flex justify-content-between align-items-center mb-3">
-                  <h4>Web Development</h4>
-                  <p class="price">$169</p>
-                </div>
+              <div class="card-deck">
+                <div class="card">
+                  <a href="{{ route('front.detalhes',$curso->id) }}">
+                    @if ($curso->imagem)
+                      <img src="{{ url("storage/cursos/{$curso->imagem}") }}" class="img-fluid align-items-stretch" alt="">
+                    @else
+                      <img src="{{ url("storage/cursos/nofoto.jpg") }}" class="img-fluid align-items-stretch" alt="">
+                    @endif
+                  </a>
+                  <div class="card-body">
+                    <h5 class="card-title">{{ $curso->nome }}</h5>
+                    <p class="card-text">{{ $curso->descricao }}</p>
+                    @foreach($curso->categorias as $cat)
+                      <span class="badge badge-success align-left">{{ $cat->nome }}</span>
+                    @endforeach
+                  </div>
 
-                <h3><a href="course-details.html">Website Design</a></h3>
-                <p>Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae dolores dolorem tempore.</p>
-                <div class="trainer d-flex justify-content-between align-items-center">
-                  <div class="trainer-profile d-flex align-items-center">
-                    <img src="{{ asset('front/assets/img/trainers/trainer-1.jpg') }}" class="img-fluid" alt="">
-                    <span>Antonio</span>
+                  <div class="card-footer price">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="mb-6 float-left">
+                          <p><b> Preço: </b></p>
+                        </div>
+                        <div class="mb-6 float-right">
+                          <p><b> R$ {{ $curso->preco }} </b></p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <div class="trainer-rank d-flex align-items-center">
-                    <i class="bx bx-user"></i>&nbsp;50
-                    &nbsp;&nbsp;
-                    <i class="bx bx-heart"></i>&nbsp;65
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> <!-- End Course Item-->
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
-            <div class="course-item">
-              <img src="{{ asset('front/assets/img/course-2.jpg') }}" class="img-fluid" alt="...">
-              <div class="course-content">
-                <div class="d-flex justify-content-between align-items-center mb-3">
-                  <h4>Marketing</h4>
-                  <p class="price">$250</p>
-                </div>
-
-                <h3><a href="course-details.html">Search Engine Optimization</a></h3>
-                <p>Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae dolores dolorem tempore.</p>
-                <div class="trainer d-flex justify-content-between align-items-center">
-                  <div class="trainer-profile d-flex align-items-center">
-                    <img src="{{ asset('front/assets/img/trainers/trainer-2.jpg') }}" class="img-fluid" alt="">
-                    <span>Lana</span>
-                  </div>
-                  <div class="trainer-rank d-flex align-items-center">
-                    <i class="bx bx-user"></i>&nbsp;35
-                    &nbsp;&nbsp;
-                    <i class="bx bx-heart"></i>&nbsp;42
-                  </div>
+                  <a href="{{ route('front.detalhes',$curso->id) }}"><button type="button" class="btn btn-success btn-block"> Detalhes</button></a>
                 </div>
               </div>
             </div>
-          </div> <!-- End Course Item-->
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
-            <div class="course-item">
-              <img src="{{ asset('front/assets/img/course-3.jpg') }}" class="img-fluid" alt="...">
-              <div class="course-content">
-                <div class="d-flex justify-content-between align-items-center mb-3">
-                  <h4>Content</h4>
-                  <p class="price">$180</p>
-                </div>
-
-                <h3><a href="course-details.html">Copywriting</a></h3>
-                <p>Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae dolores dolorem tempore.</p>
-                <div class="trainer d-flex justify-content-between align-items-center">
-                  <div class="trainer-profile d-flex align-items-center">
-                    <img src="assets/img/trainers/trainer-3.jpg" class="img-fluid" alt="">
-                    <span>Brandon</span>
-                  </div>
-                  <div class="trainer-rank d-flex align-items-center">
-                    <i class="bx bx-user"></i>&nbsp;20
-                    &nbsp;&nbsp;
-                    <i class="bx bx-heart"></i>&nbsp;85
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> <!-- End Course Item-->
-
+          @endforeach
         </div>
 
       </div>

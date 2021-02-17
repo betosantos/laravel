@@ -11,9 +11,21 @@ class FrontController extends Controller
 {
   public function front()
   {
-    $cursos = Curso::all();
+    $cursos = Curso::paginate(6);
     return view('front.index', compact('cursos'));
   }
+
+
+  public function search(Request $request)
+  {
+    $search = $request->input('search');
+    $categorias = Categoria::all();
+
+    $cursos = Curso::where('nome','LIKE',"%{$search}%")->get();
+
+    return view('front.search', compact('categorias','search','cursos'));
+  }
+
 
 
   public function contato()
@@ -22,15 +34,23 @@ class FrontController extends Controller
   }
 
 
+
   public function sobre()
   {
     return view('front.sobre');
   }
 
 
-  public function curso()
+  public function curso(Request $request)
   {
-    return view('front.curso');
+    $search = $request->input('search');
+    $cursos = Curso::all();
+    $categorias = Categoria::all();
+    $curso = Curso::query()
+    ->where('nome', 'LIKE', "% {$search} %")
+    ->get();
+
+    return view('front.curso', compact('cursos','categorias','categorias','curso'));
   }
 
 

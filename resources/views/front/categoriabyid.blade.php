@@ -15,13 +15,17 @@
     <section id="courses" class="courses">
       <div class="container" data-aos="fade-up">
 
-
         <div class="row row-cols-1 row-cols-md-3" data-aos="zoom-in" data-aos-delay="100">
           @foreach($categoria->cursos as $catcurso)
-            <div class="col mb-4 align-items-stretch">
+            <div class="col mb-4 d-flex align-items-stretch">
               <div class="course-content card">
                 <a href="{{ route('front.detalhes',$catcurso->id) }}">
-                  <img src="{{ url("storage/cursos/{$catcurso->imagem}") }}" class="img-fluid" alt="">
+                  @if ($catcurso->imagem)
+                    <img src="{{ url("storage/cursos/{$catcurso->imagem}") }}" class="img-fluid align-items-stretch" alt="">
+                  @else
+                    <img src="{{ url("storage/cursos/nofoto.jpg") }}" class="img-fluid align-items-stretch" alt="">
+                  @endif
+                  {{-- <img src="{{ url("storage/cursos/{$catcurso->imagem}") }}" class="img-fluid" alt=""> --}}
                 </a>
 
                 <div class="card-body">

@@ -8,6 +8,7 @@ Route::get('/contato', 'FrontController@contato')->name('front.contato');
 Route::get('/detalhes/{id}', 'FrontController@detalhes')->name('front.detalhes');
 Route::get('/categoria/{id}', 'FrontController@categoria')->name('front.categoria');
 Route::get('/logout', 'FrontController@logout')->name('front.logout');
+Route::get('/search', 'FrontController@search')->name('front.search');
 
 
 Route::group(['middleware' => ['auth']], function () {

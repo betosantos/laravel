@@ -34,7 +34,7 @@
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo mr-auto"><a href="{{ route('front') }}">Mentor</a></h1>
+      <h1 class="logo mr-auto"><a href="{{ route('front') }}">ProntoInfo</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
@@ -74,18 +74,31 @@
         <div class="row">
 
           <div class="col-lg-3 col-md-6 footer-contact">
-            <h3>Mentor</h3>
+            <h3>PRONTO Info</h3>
+            <br />
             <p>
-              A108 Adam Street <br>
+              {{-- A108 Adam Street <br>
               New York, NY 535022<br>
-              United States <br><br>
-              <strong>Celular:</strong> (11) 9 9610-8766<br>
+              United States <br><br> --}}
+              <h6><strong>Celular:</strong> (11) 9 9610-8766<h6>
+              <br />
               <strong>Email:</strong> oliveira.roberto@gmail.com<br>
             </p>
           </div>
 
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4> Serviços </h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> Segurança da Informação </li>
+              <li><i class="bx bx-chevron-right"></i> Consultoria </li>
+              <li><i class="bx bx-chevron-right"></i> Redes </li>
+              <li><i class="bx bx-chevron-right"></i> Desenvolvimento Web </li>
+              <li><i class="bx bx-chevron-right"></i> Comércio Eletrônico </li>
+            </ul>
+          </div>
+
           <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Useful Links</h4>
+            <h4> Links </h4>
             <ul>
               <li><i class="bx bx-chevron-right"></i> <a href="{{ route('front') }}">Home</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="{{ route('front.sobre') }}">Sobre</a></li>
@@ -94,19 +107,8 @@
             </ul>
           </div>
 
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Services</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
-            </ul>
-          </div>
-
           <div class="col-lg-4 col-md-6 footer-newsletter">
-            <h4>Assine gratuitamente a Newsletter</h4>
+            <h4> Cadastre-se gratuitamente na Newsletter </h4>
             <p>Informe seu e-mail para receber novidades e informações gratuitamente.</p>
             <form action="" method="post">
               <input type="email" name="email"><input type="submit" value="Receba">
@@ -121,10 +123,10 @@
 
       <div class="mr-md-auto text-center text-md-left">
         <div class="copyright">
-          &copy; Copyright <strong><span>Mentor</span></strong>. All Rights Reserved
+          &copy; Desenvolvido <strong><span>Consultoria Pronto Info </span></strong>
         </div>
         <div class="credits">
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+          Todos os Direitos Reservados
         </div>
       </div>
       <div class="social-links text-center text-md-right pt-3 pt-md-0">

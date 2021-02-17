@@ -12,7 +12,8 @@ class CursosController extends Controller
 
   public function index()
   {
-    $cursos = Curso::orderBy('nome','desc')->paginate(10);
+    // $cursos = Curso::orderBy('nome','desc')->paginate(10);
+    $cursos = Curso::paginate(6);
     $categorias = Categoria::all();
 
     return view('cursos.index', compact('cursos', 'categorias'));
@@ -81,7 +82,7 @@ class CursosController extends Controller
 
       $upload = $request->file('imagem')->storeAs('cursos', $nameFile);
     }
-    
+
     $curso = Curso::find($id);
     $curso->update($data);
     $curso->categorias()->sync($data['categorias']);

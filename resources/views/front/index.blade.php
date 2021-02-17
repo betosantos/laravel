@@ -5,8 +5,8 @@
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex justify-content-center align-items-center">
     <div class="container position-relative" data-aos="zoom-in" data-aos-delay="100">
-      <h1>Tecnologia da Informação </h1>
-      <h2>Consultoria especializada em tecnologia da Informação</h2>
+      <h1>PRONTOInfo </h1>
+      <h2>Portal de Ensino e Consultoria em Tecnologia da Informação. </h2>
       <a href="courses.html" class="btn-get-started">Conheça</a>
     </div>
   </section><!-- End Hero -->
@@ -18,7 +18,7 @@
     <div class="container" data-aos="fade-up">
 
       <div class="section-title">
-        <h2>Tecnologia da Informação</h2>
+        <h2>Consultoria</h2>
         {{-- <p>Tecnologia da Informação</p> --}}
       </div>
 
@@ -27,15 +27,15 @@
           <img src="{{ asset('front/assets/img/about.jpg') }}" class="img-fluid" alt="">
         </div>
         <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
-          <h3>Como pode ajudar seu negócio.</h3>
+          <h3>Como ajudar seu negócio.</h3>
           <p class="font-italic">
-            A nova economia mundial, baseada na Tecnologia de Informação, requer das organizações um conhecimento para coletar, trabalhar, interpretar e gerenciar este recurso.
+            Hoje em dia, é praticamente impossível pensar em empresas, independente do seu porte e segmento de mercado, terem sucesso em termos de vendas e administração, sem o uso da tecnologia. Mas afinal, o que ela pode fazer pelo seu empreendimento?
           </p>
           <br/>
           <ul>
-            <li><i class="icofont-check-circled"></i> O desenvolvimento e o domínio das habilidades relacionadas a tecnologia da informação serão fundamentais para as organizações buscarem uma posição melhor no mercado em relação aos seus concorrentes, sendo necessário um engajamento na constante busca por inovação..</li>
+            <li><i class="icofont-check-circled"></i> Em tempos de crise financeira e instabilidade no cenário político e econômico mundial, são as empresas que sabem controlar os seus custos que conseguem se manter firmes mesmo com as adversidades. </li>
             <br/>
-            <li><i class="icofont-check-circled"></i> Em contrapartida, as organizações que resistirem à economia da informação serão facilmente vencidas pela concorrência..</li>
+            <li><i class="icofont-check-circled"></i> Esse setor é estratégico na gestão do seu negócio, mesmo que ainda não receba a atenção necessária de muitos administradores.</li>
           </ul>
           {{-- <p>
           Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
@@ -47,37 +47,6 @@
   </div>
 </section><!-- End About Section -->
 
-<!-- ======= Counts Section ======= -->
-<section id="counts" class="counts section-bg">
-  <div class="container">
-
-    <div class="row counters">
-
-      <div class="col-lg-3 col-6 text-center">
-        <span data-toggle="counter-up">1232</span>
-        <p>Students</p>
-      </div>
-
-      <div class="col-lg-3 col-6 text-center">
-        <span data-toggle="counter-up">64</span>
-        <p>Courses</p>
-      </div>
-
-      <div class="col-lg-3 col-6 text-center">
-        <span data-toggle="counter-up">42</span>
-        <p>Events</p>
-      </div>
-
-      <div class="col-lg-3 col-6 text-center">
-        <span data-toggle="counter-up">15</span>
-        <p>Trainers</p>
-      </div>
-
-    </div>
-
-  </div>
-</section><!-- End Counts Section -->
-
 <!-- ======= Why Us Section ======= -->
 <section id="why-us" class="why-us">
   <div class="container" data-aos="fade-up">
@@ -87,11 +56,10 @@
         <div class="content">
           <h3>Diferenciais de mercado.</h3>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
-            Asperiores dolores sed et. Tenetur quia eos. Autem tempore quibusdam vel necessitatibus optio ad corporis.
+            A utilização da tecnologia da informação (T.I.) tem fundamental importância, pois possibilita o processamento de grandes quantidades de informações, e auxiliam na eficiente tomada de decisão naquele momento.
           </p>
           <div class="text-center">
-            <a href="about.html" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
+            <a href="about.html" class="more-btn">Conheça <i class="bx bx-chevron-right"></i></a>
           </div>
         </div>
       </div>
@@ -101,22 +69,22 @@
             <div class="col-xl-4 d-flex align-items-stretch">
               <div class="icon-box mt-4 mt-xl-0">
                 <i class="bx bx-receipt"></i>
-                <h4>Satisfação</h4>
-                <p>Manter os clientes satisfeitos com excelência no trabalho e atendimento </p>
+                <h4>Segurança</h4>
+                <p>Mais segurança para os dados empresariais </p>
               </div>
             </div>
             <div class="col-xl-4 d-flex align-items-stretch">
               <div class="icon-box mt-4 mt-xl-0">
                 <i class="bx bx-cube-alt"></i>
                 <h4>Qualidade</h4>
-                <p>Propondo soluções na medida certa de acordo com as necessidades </p>
+                <p>Propondo soluções na medida certa para cada tipo de negócio </p>
               </div>
             </div>
             <div class="col-xl-4 d-flex align-items-stretch">
               <div class="icon-box mt-4 mt-xl-0">
                 <i class="bx bx-images"></i>
-                <h4>Respeito</h4>
-                <p>Cada cleinte é único com tratamento exclusivo </p>
+                <h4>Produtividade</h4>
+                <p>Aumento da produtividade melhor controle dos recursos </p>
               </div>
             </div>
           </div>
@@ -127,9 +95,15 @@
   </div>
 </section><!-- End Why Us Section -->
 
+
+
 <!-- ======= Features Section ======= -->
 <section id="features" class="features">
   <div class="container" data-aos="fade-up">
+    <div class="section-title">
+      <h2> Serviços </h2>
+      {{-- <p>Tecnologia da Informação</p> --}}
+    </div>
 
     <div class="row" data-aos="zoom-in" data-aos-delay="100">
       <div class="col-lg-3 col-md-4">
@@ -191,51 +165,66 @@
   <div class="container" data-aos="fade-up">
 
     <div class="section-title">
-      <h2>Cursos de Tecnologia da Informação</h2>
+      <h2>Tecnologia da Informação</h2>
       <p>Cursos em Destaque</p>
     </div>
 
-    <div class="row row-cols-1 row-cols-md-3" data-aos="zoom-in" data-aos-delay="100">
-      @foreach($cursos as $curso)
-        <div class="col mb-4 align-items-stretch">
-          <div class="course-content card">
-            <a href="{{ route('front.detalhes',$curso->id) }}">
-              @if ($curso->imagem)
-                <img src="{{ url("storage/cursos/{$curso->imagem}") }}" class="img-fluid" alt="">
-              @else
-                <img src="{{ url("storage/cursos/nofoto.jpg") }}" class="img-fluid" alt="">
-              @endif
-            </a>
+    <form class="form-inline" style="margin-bottom:20px;" method="GET" action="{{ route('front.search') }}">
+      <div class="input-group" style="width:100%;">
+        <input type="search" class="form-control rounded" placeholder="Buscar Cursos" name="search" id="search"/>
+        {{-- <button type="button" class="btn btn-outline-success">Buscar</button> --}}
+        <button type="submit" class="btn btn-success">Buscar</button>
+      </div>
+    </form>
 
-            <div class="card-body">
+    <div class="row" data-aos="zoom-in" data-aos-delay="100">  
+      @foreach ($cursos as $curso)
+        <div class="col-lg-4 d-flex align-items-stretch" style="margin-bottom:40px;">
+          <div class="card-deck">
+            <div class="card">
               <a href="{{ route('front.detalhes',$curso->id) }}">
-                <h3 style="color:black !important;">{{ $curso->nome }}</h3>
+                @if ($curso->imagem)
+                  <img src="{{ url("storage/cursos/{$curso->imagem}") }}" class="img-fluid align-items-stretch" alt="">
+                @else
+                  <img src="{{ url("storage/cursos/nofoto.jpg") }}" class="img-fluid align-items-stretch" alt="">
+                @endif
+              </a>
+              <div class="card-body">
+                <h5 class="card-title">{{ $curso->nome }}</h5>
                 <p class="card-text">{{ $curso->descricao }}</p>
-
                 @foreach($curso->categorias as $cat)
                   <span class="badge badge-success align-left">{{ $cat->nome }}</span>
                 @endforeach
+              </div>
 
-                <div class="row price card-footer" style="margin-top:20px;">
-                  <div class="col-md-6 text-left">
-                    Preço
-                  </div>
-                  <div class="col-md-6 pull-right">
-                    R$ {{ $curso->preco }}
+              <div class="card-footer price">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="mb-6 float-left">
+                      <p><b> Preço: </b></p>
+                    </div>
+                    <div class="mb-6 float-right">
+                      <p><b> R$ {{ $curso->preco }} </b></p>
+                    </div>
                   </div>
                 </div>
-
-                <a href="{{ route('front.detalhes',$curso->id) }}"><button type="button" class="btn btn-success btn-block" style="margin-top:10px;">Detalhes</button></a>
-              </a>
-
+              </div>
+              <a href="{{ route('front.detalhes',$curso->id) }}"><button type="button" class="btn btn-success btn-block"> Detalhes</button></a>
             </div>
           </div>
         </div>
       @endforeach
     </div>
 
+    <div class="row float-right">
+      <div class="col-md-12">
+        <div class="todos-cursos">
+          <a href="{{ route('front.curso') }}"><button type="button" class="btn btn-success"> Todos os Cursos</button></a>
+        </div>
+      </div>
+    </div>
 
-  </div>
+  </div><!-- FIM do container -->
 </section><!-- End Popular Courses Section -->
 
 <!-- ======= Trainers Section ======= -->
